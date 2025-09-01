@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <!-- NAVBAR SECTION -->
+    <nav id="navbar-section__main">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <img src="./Assets/logo-image.png" alt="Cafe Brand" />
+          <img src="./Assets/logo-text.png" alt="Cafe Name" />
+        </div>
+
+        <div class="navbar-item-group">
+          <ul class="navbar-items">
+            <li>
+              <a class="navbar-item" href="#">Главная</a>
+            </li>
+            <li>
+              <a class="navbar-item" href="#">О Нас</a>
+            </li>
+            <li>
+              <a class="navbar-item" href="#">Меню</a>
+            </li>
+            <li>
+              <button class="navbar-item" id="feedbackBtn">
+                Обратная связь
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="navbar-item-right">
+          <button>
+            <a id="signup-btn" href="#">Регистрация</a>
+          </button>
+
+          <button>
+            <a id="login-btn" href="#">Вход</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <div id="hero-section__main">
+      <div class="hero-section__top">
+        <div class="hero-item-first__top">
+          <p>Добро пожаловать в DeCafe!</p>
+        </div>
+
+        <div class="hero-item-second__top"></div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div id="about-section__main">
+      <div class="about-section__header">
+        <h1>О Нас</h1>
+
+        <p class="about-section__desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+          nihil iusto consequuntur dignissimos! Repudiandae magni recusandae
+          ratione aperiam ullam nesciunt incidunt beatae deleniti. Eum cum rem
+          reiciendis officiis, maxime eius nam inventore magnam impedit unde sit
+          accusamus in aut eveniet quaerat <br />natus nihil ullam dolor!
+          Repellendus id exercitationem voluptatem voluptatum.
+        </p>
+      </div>
+
+      <div class="about-section__image">
+        <img src="./Assets/about-bg.png" alt="" />
+      </div>
+    </div>
+
+    <!-- MENU SECTION -->
+    <div id="menu-section__main">
+      <div class="menu-section__header">
+        <h1>Наше Меню</h1>
+
+        <p class="menu-section__desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          harum eius dolorem, fugiat quos magni nemo temporibus voluptatem esse,
+          illo porro dignissimos fugit ullam rerum, itaque alias nobis.
+          Consectetur, delectus!
+        </p>
+      </div>
+
+      <div class="menu-section__images">
+        <img src="./Assets/Menu/menu-images.png" alt="" />
+        <img src="./Assets/Menu/Rectangle 6.png" alt="" />
+        <img src="./Assets/Menu/Rectangle 7.png" alt="" />
+        <img src="./Assets/Menu/Rectangle 9.png" alt="" />
+      </div>
+    </div>
+
+    <!-- BLOG SECTION -->
+
+    <div id="blog-section__main"></div>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div id="footer-first">
+        <div id="footer-logo">
+          <img src="./Assets/logowhite/Vector.png" alt="" />
+          <img src="./Assets/logowhite/DeCafe.png" alt="" />
+        </div>
+
+        <div id="footer-first__desc">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+        </div>
+      </div>
+
+      <div id="footer-second">
+        <h2>Свяжитесь с нами</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+
+      <div id="footer-third">
+        <h2>Социальные сети</h2>
+        <div id="footer-third__media">
+          <img src="./Assets/socials/social-icons-1.png" alt="" />
+          <img src="./Assets/socials/social-icons.png" alt="" />
+          <img src="./Assets/socials/Vector.png" alt="" />
+        </div>
+      </div>
+
+      <div id="footer-fourth">
+        <h2>Подробнее</h2>
+
+        <div id="footer-more">
+          <ul>
+            <li>Про аллергии</li>
+            <li>Карьеры</li>
+            <li>Политика персональных данных</li>
+            <li>Возврат средств</li>
+            <li>Волонтерство</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL WINDOW -->
+    <div
+      id="feedbackModal"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        style="
+          background: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          max-width: 400px;
+          width: 100%;
+        "
+      >
+        <button id="closeModal" style="float: right">✕</button>
+        <h2>Свяжитесь с нами</h2>
+        <form id="feedbackForm">
+          <label>Имя*<br /><input type="text" name="name" required /></label
+          ><br /><br />
+          <label
+            >Email или Телефон*<br /><input
+              type="text"
+              name="contact"
+              required /></label
+          ><br /><br />
+          <label
+            >Сообщение*<br /><textarea
+              name="message"
+              required
+            ></textarea></label
+          ><br /><br />
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
