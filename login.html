@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Вход | DeCafe</title>
+    <style>
+        * {
+             font-family: "Alegreya", serif;
+        }
+      body {
+        background: #fff8ef;
+       
+        margin: 0;
+        color: #523010;
+      }
+      .container {
+        max-width: 350px;
+        margin: 60px auto;
+        background: #f6e1c3;
+        border-radius: 20px;
+        box-shadow: 0 4px 20px #dcc4a2aa;
+        padding: 36px 30px 30px;
+      }
+      h2 {
+        text-align: center;
+        color: #523010;
+        margin-bottom: 24px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #543510;
+      }
+      input {
+        width: 100%;
+        padding: 8px 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ceb391;
+        border-radius: 10px;
+        font-size: 16px;
+        background: #fffdf7;
+        color: #543510;
+      }
+      .error {
+        color: #d53a1c;
+        font-size: 14px;
+        margin-bottom: 10px;
+        min-height: 18px;
+      }
+      button {
+        width: 100%;
+        background: #73501e;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      button:hover {
+        background: #523010;
+      }
+      .link {
+        display: block;
+        text-align: center;
+        margin-top: 18px;
+        color: #73501e;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+        font-weight: bold;
+        font-size: 26px;
+        letter-spacing: 0.7px;
+      }
+      .logo img {
+        height: 28px;
+        margin-right: 12px;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <h3>DeCafe</h3>
+      </div>
+      <h2>Вход</h2>
+      <form id="login-form" novalidate>
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
+        <div id="email-error" class="error"></div>
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" required minlength="4" />
+        <div id="password-error" class="error"></div>
+
+        <button type="submit">Войти</button>
+      </form>
+      <a class="link" href="register.html">Нет аккаунта? Зарегистрироваться</a>
+    </div>
+    <script>
+      document.querySelector("#login-form").onsubmit = function (e) {
+        e.preventDefault();
+        let valid = true;
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        document.getElementById("email-error").textContent = "";
+        document.getElementById("password-error").textContent = "";
+        if (!email.value.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)) {
+          document.getElementById("email-error").textContent =
+            "Введите корректный email";
+          valid = false;
+        }
+        if (password.value.length < 4) {
+          document.getElementById("password-error").textContent =
+            "Пароль должен быть не менее 4 символов";
+          valid = false;
+        }
+        if (valid) {
+          alert("Вход выполнен! (Демо)");
+          // Тут должна быть отправка на сервер
+        }
+      };
+    </script>
+  </body>
+</html>
