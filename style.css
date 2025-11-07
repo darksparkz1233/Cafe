@@ -516,7 +516,7 @@ h2 {
   }
 }
 
-/* Tablets */
+/* Планшеты */
 @media (min-width: 601px) and (max-width: 1024px) {
   .coffee-container, .snacks-container {
     display: grid;
